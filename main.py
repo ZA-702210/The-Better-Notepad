@@ -16,11 +16,19 @@ root.title("The Better Notepad")
 root.iconbitmap='TBN_Bin/logo.ico'
 currentRow=-1
 
+root.columnconfigure(0,weight=1)
+root.columnconfigure(1,weight=1)
+root.columnconfigure(2,weight=1)
+root.columnconfigure(3,weight=1)
+#root.columnconfigure(4,weight=5)
+#root.rowconfigure(0,weight=4)
+#root.rowconfigure(1,weight=0)
+
 openFileButton = Button(root,text="Open File").grid(row=0,column=0,padx=1,pady=1)
 saveFileButton = Button(root,text="Save File").grid(row=0,column=1,padx=1,pady=1)
 newFileButton = Button(root,text="New File").grid(row=0,column=2,padx=1,pady=1)
 settingsButton = Button(root,text="Settings").grid(row=0,column=3,padx=1,pady=1)
-textBox = Text(root).grid(row=1,column=0,rowspan=3,columnspan=50)
+textBox = Text(root).grid(row=1,column=0,columnspan=4)
 
 #Creating Labels
 #myLabel = Label(root, text="damn")
