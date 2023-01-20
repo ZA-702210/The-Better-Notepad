@@ -19,6 +19,7 @@ def openFile():
   selectedTextFile = open(root.filename, 'r')
   print(root.filename)
   print(selectedTextFile.read())
+  selectedTextFile.close()
 #
 
 
