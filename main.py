@@ -63,6 +63,7 @@ def newFile():
 
 #
 
+  
 #Empties a notepad
 def clearNotepad():
   textBox.delete('1.0', END)
@@ -78,12 +79,14 @@ saveFileButton = Button(root,text="Save File",command=saveFile).grid(row=0,colum
 newFileButton = Button(root,text="New File",command=newFile).grid(row=0,column=2,padx=1,pady=1)
 clearNotepadButton = Button(root,text="Clear Notepad",command=clearNotepad).grid(row=0,column=3,padx=1,pady=1)
 
+
 #Making the textbox and putting it under root
 #Configures it under row 1, and spans accross all columns
 #Inserts placeholder text on the first row
 textBox = Text(root)
 textBox.grid(row=1,column=0,columnspan=4)
 textBox.insert('1.0',"Placeholder text")
+
 
 #CRITICAL otherwise it wont update
 root.mainloop()
